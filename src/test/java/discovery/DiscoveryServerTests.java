@@ -1,10 +1,10 @@
-package cloud.config;
+package discovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CloudConfigApplicationTests {
+class DiscoveryServerTests {
 
 	@Test
 	void contextLoads() {
