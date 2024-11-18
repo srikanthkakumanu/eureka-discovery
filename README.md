@@ -1,2 +1,2 @@
-# cloud-config
-Spring Cloud Configuration Server
+# Eureka-Discovery
+Spring Cloud Eureka Discovery Server i.e. service discovery
