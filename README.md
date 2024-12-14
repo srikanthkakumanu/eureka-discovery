@@ -1,2 +1,2 @@
-# eureka-discovery
-Eureka Discovery Service for all micro services
+# Eureka-Discovery
+Spring Cloud Eureka Discovery Server i.e. service discovery
