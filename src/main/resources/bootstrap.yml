@@ -1,3 +1,0 @@
-eureka:
-  instance:
-    non-secure-port: 9111
