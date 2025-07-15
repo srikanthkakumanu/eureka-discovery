@@ -3,16 +3,16 @@ spring:
     name: eureka-discovery-service
 
 server:
-  port: "${PORT:9111}"
+  port: ${SERVER_PORT:9111}
 
 eureka:
   instance:
-    hostname: "${EUREKA_INSTANCE_HOSTNAME:localhost}"
-    preferIpAddress: "${EUREKA_INSTANCE_PREFER_IPADDRESS:true}"
+    hostname: ${EUREKA_INSTANCE_HOSTNAME:localhost}
+    preferIpAddress: ${EUREKA_INSTANCE_PREFER_IPADDRESS:true}
   client:
     register-with-eureka: false
     service-url:
-      defaultZone: "http://${eureka.instance.hostname}:${server.port}/eureka"
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 
 # Spring Security
 #spring:
