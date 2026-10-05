@@ -1,0 +1,7 @@
+# Development.
+eureka:
+  instance:
+    hostname: ${EUREKA_INSTANCE_HOSTNAME:localhost}
+  server:
+    # Single instance: evict dead instances instead of protecting a registry that cannot renew.
+    enable-self-preservation: false

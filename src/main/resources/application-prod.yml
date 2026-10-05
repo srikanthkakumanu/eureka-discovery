@@ -1,0 +1,7 @@
+# prod.
+eureka:
+  instance:
+    hostname: ${EUREKA_INSTANCE_HOSTNAME}
+  server:
+    # Keep registrations through a network blip rather than evicting healthy instances.
+    enable-self-preservation: true
