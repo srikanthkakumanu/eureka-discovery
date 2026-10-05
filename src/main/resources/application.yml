@@ -5,9 +5,14 @@ spring:
     name: eureka-discovery-service
   profiles:
     default: dev
+  lifecycle:
+    # How long in-flight requests get to finish; the container is given longer than this.
+    timeout-per-shutdown-phase: 30s
 
 server:
   port: ${SERVER_PORT:9111}
+  # On stop, finish the requests in flight instead of dropping them.
+  shutdown: graceful
 
 eureka:
   client:
