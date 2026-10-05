@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: eureka-discovery-service
+
+server:
+  port: ${SERVER_PORT:9111}
+
+eureka:
+  instance:
+    hostname: ${EUREKA_INSTANCE_HOSTNAME:localhost}
+  client:
+    # Standalone registry: it neither registers with nor fetches from a peer.
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # Single dev instance: evict dead instances instead of protecting a registry that cannot renew.
+    enable-self-preservation: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
