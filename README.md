@@ -20,7 +20,8 @@ From source: `./gradlew bootRun`.
 
 | Variable | Default | Meaning |
 | --- | --- | --- |
+| `SPRING_PROFILES_ACTIVE` | `dev` | `dev`, `qa` or `prod` |
 | `SERVER_PORT` | `9111` | HTTP port |
-| `EUREKA_INSTANCE_HOSTNAME` | `localhost` | Name the registry advertises |
+| `EUREKA_INSTANCE_HOSTNAME` | `localhost` in `dev`, required otherwise | Name the registry advertises |
 
-It runs without authentication inside the dev network, and self-preservation is off because there is a single instance.
+Configuration is split by environment: `application.yml` plus `application-dev.yml`, `-qa.yml` and `-prod.yml`. Self-preservation is off in `dev`, where there is a single instance, and on in `qa` and `prod`. It runs without authentication inside the network.
