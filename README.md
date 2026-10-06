@@ -10,6 +10,7 @@ It has no API of its own beyond Eureka's, no database and no secrets.
 | --- | --- | --- |
 | `user-service` | yes | no |
 | `auth-service` | yes | no |
+| `books-service` | yes | yes, to reach user-service and auth-service |
 | `api-gateway` | yes | yes, to route requests |
 | `cloud-config-service` | yes | no |
 
@@ -58,7 +59,7 @@ It does not use the Config Server: the Config Server registers with it, so it mu
 
 This repository must sit next to [`micro-services`](../micro-services/README.md), which holds the version catalog.
 
-**With the whole platform** (the usual way): `cd ../micro-services && make up`. It starts in stage 4 of `scripts/start.sh`, after Keycloak and the bootstrap and before the services. Dashboard at http://localhost:9111.
+**With the whole platform** (the usual way): `cd ../micro-services && make up`. It starts in stage 5 of `scripts/start.sh`, after Keycloak and its bootstrap job and before the services. Dashboard at http://localhost:9111.
 
 **On its own, from source:** `./gradlew bootRun`
 
