@@ -11,6 +11,7 @@ It has no API of its own beyond Eureka's, no database and no secrets.
 | `user-service` | yes | no |
 | `auth-service` | yes | no |
 | `books-service` | yes | yes, to reach user-service and auth-service |
+| `video-service` | yes | yes, to reach user-service and auth-service |
 | `api-gateway` | yes | yes, to route requests |
 | `cloud-config-service` | yes | no |
 
